@@ -3,11 +3,10 @@ kind: Kustomization
 nameSuffix: -prod
 
 resources:
-  - ../../../../components/argocd-hook
+  - ../../../components/argocd-hook
 
 configMapGenerator:
   - name: hook-config
     behavior: merge
     literals:
       - ENVIRONMENT=prod
-      - WEBHOOK_URL=http://webhooks.demo-gitops-cicd-cicd.apps.paas.lab.stocky37.dev

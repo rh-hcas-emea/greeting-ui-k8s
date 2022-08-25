@@ -10,10 +10,14 @@ commonLabels:
   app.kubernetes.io/name: *app
   app.kubernetes.io/instance: *app
   app.kubernetes.io/component: frontend
-  app.kubernetes.io/part-of: greeting-app
   app.openshift.io/runtime: react
 
 resources:
   - deployment.yml
   - route.yml
   - service.yml
+
+configMapGenerator:
+  - name: greeting-ui-config
+    files:
+      - files/env.js
