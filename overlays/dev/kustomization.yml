@@ -5,9 +5,9 @@ commonLabels:
   environment: dev
 
 resources:
-- app
-- argocd
+  - app
+  - argocd-hook
 
 images:
-- digest: sha256:016a812d01c512faf5f37564531a95efe9a7ecc444801cfa74cf2e33aecfa4c7
-  name: quay.io/tstockwell/greeting-ui
+  - digest: sha256:dbe55640670779f15ce353482a58a60e2c1c92078ccd9f108a330bfb7a0869bd
+    name: quay.io/tstockwell/greeting-ui

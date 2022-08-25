@@ -14,6 +14,6 @@ commonLabels:
   app.openshift.io/runtime: react
 
 resources:
-- deployment.yml
-- route.yml
-- service.yml
+  - deployment.yml
+  - route.yml
+  - service.yml

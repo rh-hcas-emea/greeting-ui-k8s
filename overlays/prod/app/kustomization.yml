@@ -3,12 +3,12 @@ kind: Kustomization
 namespace: demo-gitops-cicd-prod
 
 resources:
-- ../../../base
+  - ../../../base
 
 configMapGenerator:
-- name: greeting-ui-config
-  files:
-  - env.js
+  - name: greeting-ui-config
+    files:
+      - env.js
 
 patches:
-- path: patch-route.yml
+  - path: patch-route.yml
