@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../../variants/prod
+
+configMapGenerator:
+  - name: greeting-ui-config
+    behavior: merge
+    files:
+      - files/env.js
+
+  - name: hook-config
+    behavior: merge
+    literals:
+      - WEBHOOK_URL=http://webhooks.demo-gitops-cicd-cicd.apps.cluster-zhmwn.zhmwn.sandbox607.opentlc.com
+
+patches:
+  - path: patch-route.yml

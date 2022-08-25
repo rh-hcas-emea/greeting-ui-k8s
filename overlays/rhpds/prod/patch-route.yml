@@ -1,0 +1,6 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: greeting-ui
+spec:
+  host: greetings.demo-gitops-cicd-prod.apps.cluster-zhmwn.zhmwn.sandbox607.opentlc.com
